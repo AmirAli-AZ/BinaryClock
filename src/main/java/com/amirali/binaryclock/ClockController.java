@@ -31,38 +31,23 @@ public class ClockController implements Initializable {
             @Override
             public void run() {
                 final var currentTime = LocalDateTime.now();
+
                 final var formattedHour = currentTime.format(DateTimeFormatter.ofPattern("HH"));
                 applyBinary(h1, getFirstDigit(formattedHour));
                 applyBinary(h2, getLastDigit(formattedHour));
-            }
-        };
-        final var hourTimer = new Timer("Hour Timer");
 
-        final var minuteTimerTask = new TimerTask() {
-            @Override
-            public void run() {
-                final var currentTime = LocalDateTime.now();
                 final var formattedMinute = currentTime.format(DateTimeFormatter.ofPattern("mm"));
                 applyBinary(m1, getFirstDigit(formattedMinute));
                 applyBinary(m2, getLastDigit(formattedMinute));
-            }
-        };
-        final var minuteTimer = new Timer("Minute Timer");
 
-        final var secondTimerTask = new TimerTask(){
-            @Override
-            public void run() {
-                final var currentTime = LocalDateTime.now();
                 final var formattedSecond = currentTime.format(DateTimeFormatter.ofPattern("ss"));
                 applyBinary(s1, getFirstDigit(formattedSecond));
                 applyBinary(s2, getLastDigit(formattedSecond));
             }
         };
-        final var secondTimer = new Timer("Second Timer");
+        final var timer = new Timer("Timer");
 
-        hourTimer.schedule(hourTimerTask, 1000, 1000*3600);
-        minuteTimer.schedule(minuteTimerTask, 1000, 1000*60);
-        secondTimer.schedule(secondTimerTask, 1000, 1000);
+        timer.schedule(hourTimerTask, 1000, 1000);
     }
 
     private int getFirstDigit(String s) {
