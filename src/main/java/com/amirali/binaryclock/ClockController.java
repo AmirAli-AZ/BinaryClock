@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class AppController implements Initializable {
+public class ClockController implements Initializable {
 
     @FXML
     private HBox root;
