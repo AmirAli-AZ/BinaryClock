@@ -1,0 +1,23 @@
+* {
+    -fx-accent: #0CC9AB;
+    -fx-primary-color: #0B192E;
+    -fx-text-color: #CDD7F5;
+}
+
+#root {
+    -fx-background-color: -fx-primary-color;
+}
+
+.label {
+    -fx-text-fill: -fx-text-color;
+}
+
+Circle {
+    -fx-stroke-width: 3px;
+    -fx-stroke: -fx-accent;
+    -fx-fill: -fx-primary-color;
+}
+
+Circle:OnMoment {
+    -fx-fill: -fx-accent;
+}

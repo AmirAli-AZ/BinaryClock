@@ -7,123 +7,127 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="root" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amirali.binaryclock.ClockController">
-   <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
-               <children>
-                  <Label text="H">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <VBox fx:id="h1" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
-               <children>
-                  <Label text="H">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <VBox fx:id="h2" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-         </children>
-         <HBox.margin>
-            <Insets />
-         </HBox.margin>
-      </HBox>
-      <HBox layoutX="15.0" layoutY="15.0" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
-               <children>
-                  <Label text="M">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <VBox fx:id="m1" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
-               <children>
-                  <Label text="M">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <VBox fx:id="m2" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-      <HBox layoutX="220.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
-               <children>
-                  <Label text="S">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <VBox fx:id="s1" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
-               <children>
-                  <Label text="S">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <VBox fx:id="s2" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Circle fill="gray" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </children>
-   <padding>
-      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
-   </padding>
-</HBox>
+<VBox id="root" fx:id="root" alignment="CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amirali.binaryclock.ClockController">
+    <children>
+        <HBox fx:id="container" alignment="CENTER" spacing="15.0">
+            <children>
+                <HBox alignment="CENTER" spacing="3.0">
+                    <children>
+                        <VBox alignment="BOTTOM_CENTER" spacing="3.0">
+                            <children>
+                                <Label text="H">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <VBox fx:id="h1" alignment="BOTTOM_CENTER" spacing="5.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" spacing="5.0">
+                            <children>
+                                <Label text="H">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <VBox fx:id="h2" alignment="BOTTOM_CENTER" spacing="3.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" spacing="3.0">
+                    <children>
+                        <VBox alignment="BOTTOM_CENTER" spacing="3.0">
+                            <children>
+                                <Label text="M">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <VBox fx:id="m1" alignment="BOTTOM_CENTER" spacing="5.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" spacing="3.0">
+                            <children>
+                                <Label text="M">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <VBox fx:id="m2" alignment="BOTTOM_CENTER" spacing="5.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="220.0" layoutY="10.0" spacing="3.0">
+                    <children>
+                        <VBox alignment="BOTTOM_CENTER" spacing="3.0">
+                            <children>
+                                <Label text="S">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <VBox fx:id="s1" alignment="BOTTOM_CENTER" spacing="5.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" spacing="3.0">
+                            <children>
+                                <Label text="S">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <VBox fx:id="s2" alignment="BOTTOM_CENTER" spacing="5.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                        <Circle fill="gray" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

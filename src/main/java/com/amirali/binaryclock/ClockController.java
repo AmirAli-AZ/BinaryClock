@@ -2,6 +2,7 @@ package com.amirali.binaryclock;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.HBox;
@@ -20,10 +21,12 @@ import java.util.TimerTask;
 public class ClockController implements Initializable {
 
     @FXML
-    private HBox root;
+    private HBox container;
 
     @FXML
-    private VBox h1, h2, m1, m2, s1, s2;
+    private VBox h1, h2, m1, m2, s1, s2, root;
+
+    private final PseudoClass onMoment = PseudoClass.getPseudoClass("OnMoment");
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -55,14 +58,14 @@ public class ClockController implements Initializable {
     }
 
     private int getLastDigit(String s) {
-        return Integer.parseInt(s.substring(s.length()-1));
+        return Integer.parseInt(s.substring(s.length() - 1));
     }
 
     private void applyBinary(VBox vBox, int number) {
         final var circles = getCircles(vBox);
         if (circles.isEmpty())
             return;
-        circles.forEach(circle -> circle.setFill(Color.GRAY));
+        circles.forEach(circle -> circle.pseudoClassStateChanged(onMoment, false));
         if (number == 0) return;
         if (number == 1)
             circles.getFirst().setFill(Color.DODGERBLUE);
@@ -71,7 +74,7 @@ public class ClockController implements Initializable {
         var input = number;
         while (input != 0) {
             if (input % 2 == 1)
-                circles.get(index).setFill(Color.DODGERBLUE);
+                circles.get(index).pseudoClassStateChanged(onMoment, true);
             index++;
             input /= 2;
         }
