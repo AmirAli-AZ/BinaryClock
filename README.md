@@ -12,4 +12,4 @@ Web version created by BenHerbst available at https://clock.benherbst.net
 
 ### ScreenShots
 
-<img src="images/Screenshot from 2024-01-10 20-54-57.png" alt="ScreenShot">
+<img src="images/Screenshot from 2024-01-10 21-29-25.png" alt="ScreenShot">
