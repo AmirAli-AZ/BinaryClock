@@ -27,7 +27,6 @@ public class ClockController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        final var timer = new Timer("Timer");
         final var hourTimerTask = new TimerTask() {
             @Override
             public void run() {
@@ -37,6 +36,8 @@ public class ClockController implements Initializable {
                 applyBinary(h2, getLastDigit(formattedHour));
             }
         };
+        final var hourTimer = new Timer("Hour Timer");
+
         final var minuteTimerTask = new TimerTask() {
             @Override
             public void run() {
@@ -46,6 +47,8 @@ public class ClockController implements Initializable {
                 applyBinary(m2, getLastDigit(formattedMinute));
             }
         };
+        final var minuteTimer = new Timer("Minute Timer");
+
         final var secondTimerTask = new TimerTask(){
             @Override
             public void run() {
@@ -55,9 +58,11 @@ public class ClockController implements Initializable {
                 applyBinary(s2, getLastDigit(formattedSecond));
             }
         };
-        timer.schedule(hourTimerTask, 1000, 1000*3600);
-        timer.schedule(minuteTimerTask, 1000, 1000*60);
-        timer.schedule(secondTimerTask, 1000, 1000);
+        final var secondTimer = new Timer("Second Timer");
+
+        hourTimer.schedule(hourTimerTask, 1000, 1000*3600);
+        minuteTimer.schedule(minuteTimerTask, 1000, 1000*60);
+        secondTimer.schedule(secondTimerTask, 1000, 1000);
     }
 
     private int getFirstDigit(String s) {
