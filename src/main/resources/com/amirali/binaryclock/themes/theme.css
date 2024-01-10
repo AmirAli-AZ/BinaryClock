@@ -9,7 +9,7 @@
 }
 
 .label {
-    -fx-text-fill: -fx-text-color;
+    -fx-text-fill: -fx-accent;
 }
 
 Circle {
