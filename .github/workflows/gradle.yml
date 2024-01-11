@@ -20,7 +20,7 @@ jobs:
               build/jpackage/*.deb
               build/distributions/*.zip
           - os: windows-latest
-            build_commands: gradle clean jpackage -PinstallerType=app-image
+            build_commands: gradle clean jpackage -PinstallerType=exe
             files: build/jpackage/*.exe
 
     runs-on: ${{ matrix.os }}
