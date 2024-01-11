@@ -108,8 +108,6 @@ public class Clock extends GridPane {
             return;
         circles.forEach(circle -> circle.pseudoClassStateChanged(onMoment, false));
         if (number == 0) return;
-        if (number == 1)
-            circles.getFirst().setFill(Color.DODGERBLUE);
 
         var i = 0;
         var input = number;
