@@ -1,6 +1,7 @@
 * {
     -fx-accent: #0CC9AB;
     -fx-primary-color: #0B192E;
+    -fx-secondary-color: #182B45;
     -fx-text-color: #CDD7F5;
 }
 
@@ -10,6 +11,21 @@
 
 .label {
     -fx-text-fill: -fx-accent;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: -fx-secondary-color;
+    -fx-background-radius: 5px;
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 16px;
+    -fx-padding: 10px;
+}
+
+.primary {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: black;
 }
 
 Circle {

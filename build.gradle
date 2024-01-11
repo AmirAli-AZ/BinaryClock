@@ -32,7 +32,7 @@ application {
 
 javafx {
     version = '21'
-    modules = ['javafx.controls', 'javafx.fxml']
+    modules = ['javafx.controls']
 }
 
 dependencies {
@@ -70,6 +70,9 @@ jlink {
                     '--win-per-user-install', '--win-dir-chooser',
                     '--win-menu', '--win-shortcut'
             ]
+        }
+        if (installerType == 'app-image') {
+            imageOptions += ['--icon', 'src/main/resources/com/amirali/binaryclock/icons/icon.ico']
         }
         if (installerType == 'pkg') {
             imageOptions += ['--icon', 'src/main/resources/com/amirali/binaryclock/icons/icon.ico']
