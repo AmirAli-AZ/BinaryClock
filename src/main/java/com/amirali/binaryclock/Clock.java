@@ -17,7 +17,7 @@ import java.util.TimerTask;
 
 public class Clock extends GridPane {
 
-    private final PseudoClass onMoment = PseudoClass.getPseudoClass("OnMoment");
+    private static final PseudoClass onMoment = PseudoClass.getPseudoClass("OnMoment");
 
     public Clock() {
         initGraphics();

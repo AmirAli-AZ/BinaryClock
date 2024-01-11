@@ -18,8 +18,8 @@ jobs:
               build/jpackage/*.deb
               build/distributions/*.zip
           - os: windows-latest
-            build_commands: gradle clean jpackage -PinstallerType=exe
-            files: build/jpackage/*.exe
+            build_commands: gradle clean jpackage -PinstallerType=msi
+            files: build/jpackage/*.msi
 
     runs-on: ${{ matrix.os }}
     steps:
