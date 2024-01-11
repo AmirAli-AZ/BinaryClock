@@ -62,7 +62,7 @@ jlink {
                 '--app-version', project.version
         ] as List<String>
 
-        installerType = project.findProperty('installerType')
+        //installerType = project.findProperty('installerType')
 
         // we will pass this from the command line (example: -PinstallerType=msi)
         if (installerType == 'msi') {
@@ -74,7 +74,6 @@ jlink {
         }
         if (installerType == 'exe') {
             imageOptions += ['--icon', 'src/main/resources/com/amirali/binaryclock/icons/icon.ico']
-            skipInstaller = true
         }
         if (['deb', 'rpm'].contains(installerType)) {
             imageOptions += ['--icon', 'src/main/resources/com/amirali/binaryclock/icons/icon.png']
