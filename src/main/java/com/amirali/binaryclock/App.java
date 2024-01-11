@@ -21,20 +21,13 @@ public class App extends Application {
 
         final var clock = new Clock();
 
-        final var websiteButton = new Button("Web by BenHerbst");
-        websiteButton.setCursor(Cursor.HAND);
-        websiteButton.setOnAction(actionEvent -> getHostServices().showDocument("https://clock.benherbst.net/"));
-
         final var githubRepoButton = new Button("Github by Amir Ali");
         githubRepoButton.setCursor(Cursor.HAND);
         githubRepoButton.setOnAction(actionEvent -> getHostServices().showDocument("https://github.com/AmirAli-AZ/BinaryClock"));
         githubRepoButton.getStyleClass().add("primary");
+        VBox.setMargin(githubRepoButton, new Insets(15, 0,0, 0));
 
-        final var buttons = new HBox(5, githubRepoButton, websiteButton);
-        VBox.setMargin(buttons, new Insets(15, 0, 0,0));
-        buttons.setAlignment(Pos.CENTER);
-
-        final var root = new VBox(5, clock, buttons);
+        final var root = new VBox(5, clock, githubRepoButton);
         root.setId("root");
         root.setAlignment(Pos.CENTER);
 
